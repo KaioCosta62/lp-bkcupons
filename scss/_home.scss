@@ -1,0 +1,155 @@
+.hero{
+  background: linear-gradient(164deg, rgba(239, 225, 218, 0.00) 3.82%, #EFE1DA 90.95%);
+  width: 100%;
+  height: 62.3rem;
+  .container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .content-hamburguer{
+    flex: 1;
+    max-width: 52.7rem;
+    padding-top: 12rem;
+    h3{
+      font-family: 'Ubuntu', sans-serif;
+      color: $yellow;
+      font-size: 3.2rem;
+      text-transform: uppercase;
+      margin-bottom: 2.2rem;
+      display: flex;
+      align-items: center;
+      gap: 3.7rem;
+      &::after{
+        content: '';
+        flex: 1;
+        max-width: 28rem;
+        height: 3px;
+        background: url('../img/line.svg') no-repeat center center;
+        display: inline-block;
+      }
+    }
+    img{
+      margin-bottom: 2.5rem;
+    }
+    .price{
+      width: 100%;
+      @include flexCenter;
+      gap: 3.7rem;
+      position: relative;
+      &::after{
+        content: '';
+        width: 4.3rem;
+        height: 3.8rem;
+        position: absolute;
+        background: url('../img/arrow-btn.svg') no-repeat center center;
+        right: -7.5rem;
+        top: 3rem;
+      }
+      div{
+        width: 100%;
+        flex: 1;
+        h2{
+          font-family: 'Ubuntu', sans-serif;
+          font-size: 6.5rem;
+          letter-spacing: 3px;
+          color: $yellow;
+          margin-bottom: 1rem;
+        }
+        span{
+          font-size: 1.3rem;
+          font-weight: 700;
+          letter-spacing: -0.371px;
+          line-height: 23px;
+          color: $brown;
+        }
+      }
+      button{
+        padding: 2.2rem 5.2rem;
+        background-color: $brown;
+        border-radius: 6px;
+        box-shadow: 0px 10px 40px 0px rgba(89, 41, 28, 0.60);
+        color: $white;
+        font-size: 1.6rem;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 500;
+        text-transform: uppercase;
+        transition: all .3s ease;
+        &:hover{
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  .hamburguer-image{
+    flex: 1;
+    max-width: 52.8rem;
+    height: 66.3rem;
+    border-radius: 0px 0px 12px 12px;
+    background: $yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 9.5rem;
+    padding-bottom: 4rem;
+    position: relative;
+    margin-right: 3rem;
+    .images{
+      width: 68.4rem;
+      height: 49.2rem;
+      position: absolute;
+
+      img{
+        position: absolute;
+        &.pepsi{
+          left: 0;
+          top: 2.5rem;
+          z-index: 1;
+        }
+        &.fries{
+          right: 0;
+          top: 0;
+          z-index: 1;
+        }
+        &.bk-hamburguer{
+          left: 5.2rem;
+          bottom: 0;
+          z-index: 2;
+        }
+        &.logo-bk{
+          right: 1rem;
+          bottom: 0.6rem;
+          z-index: 3;
+        }
+      }
+    }
+    .promo{
+      @include flexCenter;
+      gap: 1.6rem;
+      position: relative;
+      &::before{
+        content: '';
+        width: 8rem;
+        height: 1.4rem;
+        background: url('../img/line-left.svg') no-repeat center center;
+        position: absolute;
+        left: -9.4rem;
+        bottom: 0;
+      }
+      &::after{
+        content: '';
+        width: 8rem;
+        height: 1.4rem;
+        background: url('../img/line-right.svg') no-repeat center center;
+        position: absolute;
+        right: -9.4rem;
+        bottom: 0;
+      }
+      span{
+        font-size: 1.5rem;
+        color: $white;
+      }
+    }
+  }
+}
