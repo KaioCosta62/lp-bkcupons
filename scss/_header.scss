@@ -1,0 +1,29 @@
+.header{
+  padding: 2.5rem 0;
+  .container{
+    @include flexCenterJustify;
+  }
+  nav{
+    @include flexCenter;
+    gap: 7rem;
+    ul{
+      @include flexCenter;
+      gap: 7.7rem;
+      li{
+        a{
+          @include flexCenter;
+          gap: 1.2rem;
+          font-size: 1.4rem;
+          color: $brown;
+          font-weight: 700;
+          text-transform: uppercase;
+          font-family: 'Ubuntu', sans-serif;
+          transition: all .3s ease;
+          &:hover{
+            color: $orange;
+          }
+        }
+      }
+    }
+  }
+}
