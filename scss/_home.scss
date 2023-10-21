@@ -153,11 +153,11 @@
     }
   }
 }
-
 .offers{
   width: 100%;
   height: 20rem;
   background: url('../img/bg-login.png') no-repeat left center;
+  background-size: cover;
   display: flex;
   align-items: flex-end;
   padding-top: 4.7rem;
@@ -202,6 +202,153 @@
     transition: all .3s ease;
     &:hover{
       transform: scale(1.1);
+    }
+  }
+}
+.combo-hamburguers{
+  padding: 7rem 0;
+  overflow: hidden;
+  .hightlights{
+    display: flex;
+    justify-content: space-between;
+    gap: 3.2rem;
+    margin-bottom: 6.2rem;
+    .box-primary{
+      width: 26.3rem;
+      height: 14.4rem;
+      background-color: $yellow;
+      border-radius: 12px;
+      @include flexTotalCenter;
+      flex-direction: column;
+      gap: 0.9rem;
+      h3{
+        font-size: 2.2rem;
+        color: $white;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: -0.3px;
+      }
+    }
+    ul{
+      @include flexCenterJustify;
+      flex: 1;
+      max-width: 92.2rem;
+      gap: 1.6rem;
+      .box{
+        @include flexTotalCenter;
+        width: 21.8rem;
+        height: 14.4rem;
+        background-color: $bege;
+        border-radius: 12px;
+        transition: all .3s ease;
+        &:hover{
+          background: #59291C;
+          box-shadow: 0px 10px 40px 0px rgba(89, 41, 28, 0.60);
+        }
+      }
+    }
+  }
+  .area-slides{
+   position: relative;
+   margin-bottom: 4.7rem;
+   .btn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 6.6rem;
+    height: 6.6rem;
+    border-radius: 50%;
+    background-color: $yellow;
+    @include flexTotalCenter;
+    &.prev{
+      left: -3.3rem;
+    }
+    &.next{
+      right: -3.3rem;
+      transform: translateY(-50%)  rotate(180deg);
+    }
+    &.swiper-button-disabled{
+      opacity: 0.7;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+   }
+   .combo-hamburguer{
+    width: 100%;
+    height: 49.3rem;
+    background-color: $bege;
+    border-radius: 6px;
+    overflow: hidden;
+    .image{
+      position: relative;
+      height: 34rem;
+      width: 100%;
+      overflow: hidden;
+      border-bottom: 3px dotted $white;
+      & > img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      button{
+        position: absolute;
+        top: 2.5rem;
+        right: 2.6rem;
+        background-color: $white;
+        width: 3.8rem;
+        height: 3.8rem;
+        border-radius: 50%;
+        @include flexTotalCenter;
+      }
+    }
+    .info-combo{
+      padding: 3.6rem 4.4rem;
+      strong{
+        color: $brown;
+        font-size: 1.6rem;
+        letter-spacing: -0.2px;
+        font-size: 'Ubuntu', sans-serif;
+        margin-bottom: 1.4rem;
+        display: block;
+      }
+      h3{
+        color: $orange;
+        font-size: 3.2rem;
+        letter-spacing: 1.4px;
+        font-family: 'Ubuntu', sans-serif;
+      }
+    }
+   }
+  }
+  .control-pagination{
+    @include flexCenterJustify;
+    .swiper-pagination{
+      position: relative;
+      bottom: 0;
+      width: max-content;
+      &-bullet{
+        opacity: 0.5;
+        background-color: $yellow;
+        width: 1rem;
+        height: 1rem;
+        &-active{
+          width: 1.2rem;
+          height: 1.2rem;
+          background-color: $orange;
+          opacity: 1;
+        }
+      }
+    }
+    button{
+      @include flexCenter;
+      gap: 1.4rem;
+      color: $yellow;
+      font-size: 1.4rem;
+      font-family: 'Ubuntu', sans-serif;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: -0.1px;
     }
   }
 }
